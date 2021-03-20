@@ -1,0 +1,12 @@
+<main class="main">
+  <div class="inner">
+    <%if user_signed_in? %>
+      <div class="greeting">
+        <a>こんにちは<%= link_to current_user.name, root_path, class: :greeting__link%></a>
+      </div>
+    <% end %>
+    <div class="card__wrapper">
+    <%= render "prototype"%>
+    </div>
+  </div>
+</main>
