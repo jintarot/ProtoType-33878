@@ -5,7 +5,7 @@
         
       </p>
       
-      <%= link_to "by プロトタイプの投稿者", root_path, class: :prototype__user %>
+      <%= link_to @prototype.user.name, user_path(@prototype.user.id), class: :prototype__user %>
       <%if @prototype.user == current_user %>
         <div class="prototype__manage">
           <%= link_to "編集する", root_path, class: :prototype__btn %>

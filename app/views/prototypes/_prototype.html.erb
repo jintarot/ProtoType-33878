@@ -6,7 +6,7 @@
     <p class="card__summary">
       <%=link_to p.consept,root_path %>
     </p>
-    <%= link_to p.user.name, root_path, class: :card__user %>
+    <%= link_to p.user.name, user_path(p.user.id), class: :card__user %>
   </div>
 </div>
     <%end%>

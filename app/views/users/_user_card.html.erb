@@ -1,0 +1,18 @@
+<%@user.prototypes.each do |p|%>
+        <%= p.title%>
+       <div class="prototype__image">
+        <%= image_tag p.image.variant(resize:'500x500') %>
+      </div>
+      <div class="prototype__body">
+        <div class="prototype__detail">
+          <p class="detail__title">キャッチコピー</p>
+          <p class="detail__message">
+            <%= p.catch_copy %>
+          </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">コンセプト</p>
+          <p class="detail__message">
+            <%= p.consept %>
+          </p>
+          <%end%>
