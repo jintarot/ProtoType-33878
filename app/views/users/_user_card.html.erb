@@ -1,7 +1,7 @@
 <%@user.prototypes.each do |p|%>
         <%= p.title%>
        <div class="prototype__image">
-        <%= image_tag p.image.variant(resize:'500x500') %>
+       <%=link_to (image_tag p.image.variant(resize:'500x500')) ,prototype_path(p.id) %>
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
@@ -16,3 +16,4 @@
             <%= p.consept %>
           </p>
           <%end%>
+        

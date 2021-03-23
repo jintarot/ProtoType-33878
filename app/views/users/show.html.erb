@@ -2,13 +2,13 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= @user.profile%>
+        <%= @user.name%>
       </h2>
       <table class="table">
         <tbody>
           <tr>
             <th class="table__col1">名前</th>
-            <td class="table__col2"><%= @user.profile %></td>
+            <td class="table__col2"><%= @user.name %></td>
           </tr>
           <tr>
             <th class="table__col1">プロフィール</th>
@@ -25,7 +25,7 @@
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "ユーザー名さんのプロトタイプ"%>
+        <%= "#{@user.name}のプロトタイプ"%>
       </h2>
       <div class="user__card">
         <%= render "user_card"%>
