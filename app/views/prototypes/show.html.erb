@@ -35,14 +35,16 @@
     <%=c.user.name%>
     </div>
     <%end%>
+    <%if user_signed_in?%>
     <%=form_with model:[@prototype,@comment],local: true do |c|%>
     <div class ="submit">
     <%= c.text_field :content%>
     <%= c.submit "submit"%>
     <%end%>
+    <%end%>
     </div>
     </div>
-    
+  
     
     </div>
     
