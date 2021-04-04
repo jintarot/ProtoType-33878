@@ -32,6 +32,10 @@
       </div>
       <%if user_signed_in?%>
       <p>こんにちは<%=link_to current_user.name, edit_user_path(current_user)%>さん</p>
+      <%=link_to current_user.profile, edit_user_path(current_user)%>
+      <%=link_to current_user.occupation, edit_user_path(current_user)%>
+      <%=link_to current_user.position, edit_user_path(current_user)%>
+
       <%end%>
     </header>
     <%= yield %>
