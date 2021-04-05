@@ -32,7 +32,7 @@
      <%@comments.each do |c|%>
     <div class ="comments">
     <a><%=c.content%></a>
-    <%=c.user.name%>
+    <%=link_to c.user.name,user_path(current_user.id)%>
     </div>
     <%end%>
     <%if user_signed_in?%>
