@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
    if Comment.create(comment_params)
       redirect_to prototype_path(params[:prototype_id])
    else
-    render root_path
+    render prototype_path(params[:id])
    end
   end
   private
