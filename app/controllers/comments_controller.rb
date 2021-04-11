@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+ before_action :authenticate_user!
   def create
    if Comment.create(comment_params)
       redirect_to prototype_path(params[:prototype_id])
